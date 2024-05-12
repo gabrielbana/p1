@@ -1,0 +1,201 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+.team-logo {
+  height: 70px;
+}
+
+header {
+  background-color: #f9a370;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header a {
+  margin-right: 20px;
+}
+
+.shadow {
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 2px 5px 1px #c4c4c4;
+}
+
+#general-information {
+  background-color: #f6f1db;
+  padding: 0 0 20px;
+}
+
+#general-information h2,
+#subjects-management h2,
+#question-management h2,
+#play h2 {
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 30px;
+}
+
+#general-information div h3 {
+  text-align: center;
+}
+
+.members {
+  display: flex;
+  gap: 15px;
+}
+
+.members div {
+  display: flex;
+}
+
+.members img {
+  height: 50px;
+  border-radius: 100%;
+}
+
+#subjects-questions-management {
+  background-color: #ffd388;
+}
+
+#subjects-management form {
+  display: flex;
+  min-width: 100%;
+  gap: 5px;
+}
+
+#subjects-management form div {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+}
+
+#question-management form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+#question-management form div.input-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5px;
+  width: 400px;
+}
+
+#question-management form div.input-container select{
+  width: 177px;
+}
+
+#question-management form div.row-container {
+  display: flex;
+  gap: 5px;
+}
+
+#question-management div.table-order {
+  display: flex;
+  gap: 5px;
+  margin: 0 0 10px;
+}
+
+#question-management div.table-order p {
+  margin: 0;
+}
+
+#question-management div.table-order div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#question-management div.table-order input {
+  margin: 0;
+}
+
+#question-management table {
+  width: 100%;
+  border: 1px solid black;
+}
+
+#question-management table tr.titles {
+  height: 18px;
+}
+
+#question-management table th {
+  background-color: white;
+  border: 1px solid black;
+}
+
+#play {
+  background-color: #fddac6;
+  margin: 0 0 30px;
+  padding: 0 0 15px;
+}
+
+#play form {
+  display: flex;
+  gap: 5px;
+}
+
+#play form div {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#play form div select{
+  width: 177px;
+}
+
+#play form div input{
+  width: 40px;
+}
+
+#play .game {
+  margin: 0 30px;
+}
+
+#play .game .question {
+  background-color: #e17c24;
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  color: white;
+  align-items: center;
+  margin: 0 0 25px;
+}
+
+#play .game .question p {
+  margin: 10px 0;
+}
+
+#play .game .answers {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 25px;
+  margin: 0 0 25px;
+}
+
+#play .game .answers .answer {
+  background-color: #e17c24;
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  color: white;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 10px 20px;
+}
+
+#play .buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Obligatorio</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <img class="team-logo" src="./clg.webp" alt="team logo" />
+      </div>
+      <div>
+        <a href="http://" rel="noopener noreferrer">Información General</a>
+        <a href="http://" rel="noopener noreferrer">Administrar</a>
+        <a href="http://" rel="noopener noreferrer">¡Jugar!</a>
+      </div>
+    </header>
+    <section id="general-information">
+      <h2 class="shadow">Descripción general</h2>
+      <div>
+        <h3>¿Que encontraras en este sitio?</h3>
+        <p>
+          En este sitio podrás crear temas, preguntas y jugar a nuestra version
+          del conocido juego de Trivia.
+        </p>
+        <p>
+          Es una prueba de conocimientos generales con preguntas y respuestas
+        </p>
+        <p>
+          Cada tema tiene un nombre y una descripción. Cada pregunta es de un
+          tema, tiene un nivel (1-muy fácil, ..., 5-muy difícil), un texto que
+          la describe y te aparecerán varias respuestas, pero una sola es la
+          correcta.
+          <br />
+          Si la respondes bien, sumas 10 puntos, por cada error pierdes un
+          punto, ¡pero puede usar la ayuda!
+        </p>
+        <p>
+          El sitio fue desarrollado en el 1er. semestre 2024 - Programación 1 -
+          Universidad ORT Uruguay por:
+        </p>
+        <div class="members">
+          <div>
+            <img src="./clg.webp" alt="Victoria Salvia" />
+            <p>Victoria Salvia XXXXXX</p>
+          </div>
+          <p>y</p>
+          <div>
+            <img src="./clg.webp" alt="Gabriel Baña" />
+            <p>Gabriel Baña 229640</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="subjects-questions-management">
+      <article id="subjects-management">
+        <h2 class="shadow">Gestión de temas</h2>
+        <div>
+          <h3>Alta de temas</h3>
+          <form action="">
+            <div>
+              <label for="name">Nombre</label>
+              <input type="text" />
+            </div>
+            <div>
+              <label for="descripción">Descripción</label>
+              <input type="text" />
+            </div>
+            <button>Agregar</button>
+          </form>
+          <p>Lista de temas (total de temas: 0)</p>
+          <ul>
+            <li>Sin datos</li>
+          </ul>
+          <p>
+            Promedio de preguntas por tema (cantidad total de preguntas/cantidad
+            total de temas): sin datos
+          </p>
+          <p>Temas sin pregunta:</p>
+          <ul>
+            <li>Sin datos</li>
+          </ul>
+        </div>
+      </article>
+      <article id="question-management">
+        <h2 class="shadow">Gestión de preguntas</h2>
+        <div>
+          <h3>Alta de preguntas</h3>
+          <form action="">
+            <div class="row-container">
+              <div class="input-container">
+                <label for="subject">Tema</label>
+                <select name="subject" id="subject" type="text">
+                  <option value=""></option>
+                  <option value=""></option>
+                  <option value=""></option>
+                  <option value=""></option>
+                  <option value=""></option>
+                </select>
+              </div>
+              <div class="input-container">
+                <label for="level">Nivel</label>
+                <input name="level" id="level" type="text" />
+              </div>
+            </div>
+            <div class="row-container">
+              <div class="input-container">
+                <label for="question-text">Texto de la pregunta</label>
+                <input id="question-text" name="question-text" type="text" />
+              </div>
+              <div class="input-container">
+                <label for="correct-answer">Respuesta Correcta</label>
+                <input id="correct-answer" name="correct-answer" type="text" />
+              </div>
+              <div class="input-container">
+                <label for="incorrect-answers">Respuestas Incorrectas</label>
+                <input
+                  id="incorrect-answers"
+                  name="incorrect-answers"
+                  type="text"
+                />
+              </div>
+              <button>Agregar</button>
+            </div>
+          </form>
+          <h3>Datos generales de preguntas</h3>
+          <p>Total de preguntas registradas: 0 preguntas</p>
+          <p>Máximo puntaje obtenido por un jugador: sin datos</p>
+        </div>
+        <hr />
+        <div class="table-order">
+          <p>Preguntas registradas:</p>
+          <div>
+            <input
+              id="order-by-name-asc"
+              type="radio"
+              name="order-by-name-asc"
+              type="checkbox"
+            />
+            <label for="order-by-name-asc"
+              >Orden nombre tema creciente/nivel creciente</label
+            >
+          </div>
+          <div>
+            <input
+              id="order-by-name-desc"
+              type="radio"
+              name="order-by-name-desc"
+              type="checkbox"
+            />
+            <label for="order-by-name-desc"
+              >Orden nombre tema decreciente/nivel creciente</label
+            >
+          </div>
+        </div>
+        <table>
+          <tr class="titles">
+            <th>Nombre del tema</th>
+            <th>Nivel</th>
+            <th>Texto de la pregunta</th>
+            <th>Respuesta correcta</th>
+            <th>Respuestas incorrecta</th>
+          </tr>
+          <tr></tr>
+          <tr></tr>
+          <tr></tr>
+          <tr></tr>
+        </table>
+      </article>
+    </section>
+    <section id="play">
+      <h2 class="shadow">¡A Jugar!</h2>
+      <div>
+        <h3>Configuración</h3>
+        <form action="">
+          <div>
+            <label for="subjects-to-choose">Tema a elegir</label>
+            <select name="subjects-to-choose" id="subjects-to-choose">
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+            </select>
+          </div>
+          <div>
+            <label for="game-level">Nivel del juego</label>
+            <input type="text">
+          </div>
+          <button>Jugar</button>
+        </form>
+        <h3>Juego</h3>
+        <p>Puntaje acumulado en esta Partida: 0</p>
+        <p>La pregunta es...:</p>
+        <div class="game">
+          <div class="question">
+            <p>Texto de la pregunta</p>
+          </div>
+          <div class="answers">
+            <div class="answer">Respuesta 1</div>
+            <div class="answer">Respuesta 2</div>
+            <div class="answer">Respuesta 3</div>
+          </div>
+        </div>
+      </div>
+      <div class="buttons">
+        <button>Ayuda</button>
+        <button>Siguiente Pregunta</button>
+        <button>Terminar</button>
+      </div>
+    </section>
+  </body>
+</html>
