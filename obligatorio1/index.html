@@ -1,20 +1,21 @@
+<!-- Gabriel Baña 229640 -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="estilos.css" />
     <title>Obligatorio</title>
   </head>
   <body>
     <header>
       <div>
-        <img class="team-logo" src="./clg.webp" alt="team logo" />
+        <img class="team-logo" src="./img/clg.webp" alt="team logo" />
       </div>
       <div>
-        <a href="http://" rel="noopener noreferrer">Información General</a>
-        <a href="http://" rel="noopener noreferrer">Administrar</a>
-        <a href="http://" rel="noopener noreferrer">¡Jugar!</a>
+        <a href="#general-information">Información General</a>
+        <a href="#subjects-questions-management">Administrar</a>
+        <a href="#play">¡Jugar!</a>
       </div>
     </header>
     <section id="general-information">
@@ -43,66 +44,53 @@
         </p>
         <div class="members">
           <div>
-            <img src="./clg.webp" alt="Victoria Salvia" />
-            <p>Victoria Salvia XXXXXX</p>
-          </div>
-          <p>y</p>
-          <div>
-            <img src="./clg.webp" alt="Gabriel Baña" />
+            <img src="./img/gabriel_bana.webp" alt="Gabriel Baña" />
             <p>Gabriel Baña 229640</p>
           </div>
         </div>
       </div>
     </section>
-    <section id="subjects-questions-management">
+    <div id="subjects-questions-management">
       <article id="subjects-management">
         <h2 class="shadow">Gestión de temas</h2>
         <div>
           <h3>Alta de temas</h3>
-          <form action="">
+          <form id="formularioDeTemas">
             <div>
               <label for="name">Nombre</label>
-              <input type="text" />
+              <input id="name" type="text" />
             </div>
             <div>
               <label for="descripción">Descripción</label>
-              <input type="text" />
+              <input id="descripción" type="text" />
             </div>
             <button>Agregar</button>
           </form>
-          <p>Lista de temas (total de temas: 0)</p>
-          <ul>
-            <li>Sin datos</li>
-          </ul>
+          <p>
+            Lista de temas (total de temas: <span id="cantidadDeTemas"></span>)
+          </p>
+          <ul id="listaDeTemas"></ul>
           <p>
             Promedio de preguntas por tema (cantidad total de preguntas/cantidad
-            total de temas): sin datos
+            total de temas): <span id="promedioDePreguntas"></span>
           </p>
           <p>Temas sin pregunta:</p>
-          <ul>
-            <li>Sin datos</li>
-          </ul>
+          <ul id="listaDeTemasSinPregunta"></ul>
         </div>
       </article>
       <article id="question-management">
         <h2 class="shadow">Gestión de preguntas</h2>
         <div>
           <h3>Alta de preguntas</h3>
-          <form action="">
+          <form id="formularioDePreguntas">
             <div class="row-container">
               <div class="input-container">
                 <label for="subject">Tema</label>
-                <select name="subject" id="subject" type="text">
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                </select>
+                <select name="subject" id="listaDeTemasParaPreguntas"></select>
               </div>
               <div class="input-container">
                 <label for="level">Nivel</label>
-                <input name="level" id="level" type="text" />
+                <input name="level" id="level" type="number" max="5" />
               </div>
             </div>
             <div class="row-container">
@@ -126,7 +114,10 @@
             </div>
           </form>
           <h3>Datos generales de preguntas</h3>
-          <p>Total de preguntas registradas: 0 preguntas</p>
+          <p>
+            Total de preguntas registradas:
+            <span id="cantidadDePreguntas"></span> preguntas
+          </p>
           <p>Máximo puntaje obtenido por un jugador: sin datos</p>
         </div>
         <hr />
@@ -137,7 +128,6 @@
               id="order-by-name-asc"
               type="radio"
               name="order-by-name-asc"
-              type="checkbox"
             />
             <label for="order-by-name-asc"
               >Orden nombre tema creciente/nivel creciente</label
@@ -148,47 +138,39 @@
               id="order-by-name-desc"
               type="radio"
               name="order-by-name-desc"
-              type="checkbox"
             />
             <label for="order-by-name-desc"
               >Orden nombre tema decreciente/nivel creciente</label
             >
           </div>
         </div>
-        <table>
-          <tr class="titles">
-            <th>Nombre del tema</th>
-            <th>Nivel</th>
-            <th>Texto de la pregunta</th>
-            <th>Respuesta correcta</th>
-            <th>Respuestas incorrecta</th>
-          </tr>
-          <tr></tr>
-          <tr></tr>
-          <tr></tr>
-          <tr></tr>
+        <table id="tableDePreguntas">
+          <thead>
+            <tr class="titles">
+              <th>Nombre del tema</th>
+              <th>Nivel</th>
+              <th>Texto de la pregunta</th>
+              <th>Respuesta correcta</th>
+              <th>Respuestas incorrecta</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
         </table>
       </article>
-    </section>
+    </div>
     <section id="play">
       <h2 class="shadow">¡A Jugar!</h2>
       <div>
         <h3>Configuración</h3>
-        <form action="">
+        <form action="submit">
           <div>
             <label for="subjects-to-choose">Tema a elegir</label>
-            <select name="subjects-to-choose" id="subjects-to-choose">
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
-            </select>
+            <select name="subjects-to-choose" id="temasAElegir"></select>
           </div>
           <div>
             <label for="game-level">Nivel del juego</label>
-            <input type="text">
+            <input id="game-level" type="text" />
           </div>
           <button>Jugar</button>
         </form>
@@ -213,4 +195,7 @@
       </div>
     </section>
   </body>
+  <script src="./js/datosPrueba.js"></script>
+  <script src="./js/clases.js"></script>
+  <script src="./js/funciones.js"></script>
 </html>
